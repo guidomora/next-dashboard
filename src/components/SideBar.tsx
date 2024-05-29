@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import React from 'react'
-import { IoBrowsersOutline, IoCalculator, IoFootball, IoLogoReact } from 'react-icons/io5'
+import { IoBrowsersOutline, IoCalculator, IoFootball, IoHeartOutline, IoLogoReact } from 'react-icons/io5'
 import { SideBarMenuItem } from './SideBarMenuItem'
 
 const menuItems = [
     {path:'/dashboard/main', icon:<IoBrowsersOutline size={40}/>, title:'Dashboard', subTitle:'Visualizacion'},
     {path:'/dashboard/counter', icon:<IoCalculator size={40}/>, title:'Counter', subTitle:'Contador Client Side'},
-    {path:'/dashboard/pokemons', icon:<IoFootball size={40}/>, title:'Pokemons', subTitle:'Generacion estatica'}
+    {path:'/dashboard/pokemons', icon:<IoFootball size={40}/>, title:'Pokemons', subTitle:'Generacion estatica'},
+    {path:'/dashboard/favourites', icon:<IoHeartOutline size={40}/>, title:'Favourites', subTitle:'Global state'}
 ]
 
 export const SideBar = () => {
