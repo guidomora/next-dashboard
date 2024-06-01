@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from './counter/counterSlice'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux'
 // import type { RootState, AppDispatch } from './store'
 
 export const store = configureStore({
@@ -23,5 +23,8 @@ export type AppDispatch = typeof store.dispatch
 
 
 // tipado del dispatch y selector
-export const useAppDispatch = useDispatch.withTypes<AppDispatch>() // despachar acciones
-export const useAppSelector = useSelector.withTypes<RootState>() // seleccionar el estado
+// export const useAppDispatch = useDispatch<AppDispatch>() // despachar acciones
+// export const useAppSelector = useSelector.withTypes<RootState>() // seleccionar el estado
+
+export const useAppDispatch: () => AppDispatch = useDispatch;
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;

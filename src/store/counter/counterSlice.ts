@@ -16,9 +16,9 @@ const counterSlice = createSlice({
   initialState,
   reducers: { // acciones que mandamos a llamar para que cambiern el valor del estado
     initCounterState(state, action:PayloadAction<number>){
-      if (state.isReady) return
-      state.count = action.payload
-      state.isReady = true
+      if (state.isReady) return // si ya esta listo no hagas nada
+      state.count = action.payload // si no esta listo cambia el valor
+      state.isReady = true // cambia el estado a listo
     },
 
     addOne(state){
