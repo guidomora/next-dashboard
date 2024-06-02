@@ -1,17 +1,24 @@
-import { PokemonGrid, PokemonsResponse, SimplePokemon } from "@/pokemons"
-import Image from "next/image"
+
+
+import { FavoritePokemons} from "@/pokemons"
 
 
 
 const PokemonsPage = async () => {
 
+    
+    
+
     return (
         <div className="flex flex-col">
             <span className="text-5xl mr-r">Favourite Pokemons <small className="text-blue-500">Global state</small></span>
-            <PokemonGrid pokemons={[]} />
+            <FavoritePokemons />
         </div>
     )
 }
 
 export default PokemonsPage
+
+
+
 
